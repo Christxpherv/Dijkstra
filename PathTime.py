@@ -6,5 +6,11 @@ class Dijkstra:
   
   # find the shortest path between two nodes in the graph using the Dijkstra algorithm
   def shortestPath(self, start_name, end_name):
-     # work in progress
-     return None 
+      # create a dictionary of nodes with their shortest times, initially set to infinity
+      shortest_times = {node: float('infinity') for node in self.graph.nodes}
+      # set the shortest time of the starting node to 0
+      shortest_times[start_name] = 0
+      # set of unvisited nodes
+      unvisited = set(self.graph.nodes.keys())
+
+      return None
